@@ -1,0 +1,19 @@
+.header {
+  text-align: center;
+  background: #33b5e5;
+  color: #fff;
+}
+.header h1 {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+.header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.header span {
+  margin: auto 0.4em;
+}
+.header nav {
+  padding-bottom: 0.5em;
+}
