@@ -14,7 +14,9 @@
   align-items: center;
   justify-content: flex-start;
 }
-.product-container {
+.product-container form {
+  display: flex;
+  flex-direction: column;
 }
 .select-input {
   width: 108px;
