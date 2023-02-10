@@ -4,7 +4,7 @@
   </a>
   <p>{{ product.name }}</p>
   <p>${{ product.price }}</p>
-  <form (ngSubmit)="onSubmit(product, $event)">
+  <form (ngSubmit)="onSubmit(product)">
     <select (change)="changeQte($event)" class="select-input">
       <option value="1">1</option>
       <option value="2">2</option>

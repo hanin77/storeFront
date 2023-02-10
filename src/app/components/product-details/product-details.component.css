@@ -41,3 +41,13 @@
   background: #0597cc;
   cursor: pointer;
 }
+
+.product-details__desc form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.product-details__desc .select-input {
+  width: 108px;
+}
