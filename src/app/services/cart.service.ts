@@ -29,7 +29,6 @@ export class CartService {
             return i.id;
           })
           .indexOf(cartItem.id);
-        console.log(itemIndex);
         this.cart.splice(itemIndex, 1, cartItem);
       }
     }
