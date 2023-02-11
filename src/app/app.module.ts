@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
+import { SuccessComponent } from './components/success/success.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { UserFormComponent } from './components/user-form/user-form.component';
     ProductDetailsComponent,
     CartComponent,
     UserFormComponent,
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,

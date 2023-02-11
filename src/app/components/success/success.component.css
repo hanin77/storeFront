@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: aquamarine;
+}
+
+.btn {
+  background: #33b5e5;
+  border: none;
+  color: #fff;
+  padding: 0.5em 0.5em;
+  border-radius: 0.2em;
+}
+
+.btn:hover {
+  background: #0597cc;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container p {
+  font-size: 1.3em;
+}
+
+.container p span {
+  font-weight: 700;
+}

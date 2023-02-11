@@ -37,6 +37,6 @@ export class CartComponent implements OnInit {
     this.cartService.clearCart();
     console.log(this.cartService.getOrder());
     //navigate to success order page
-    this.router.navigate(['']);
+    this.router.navigate(['success']);
   }
 }

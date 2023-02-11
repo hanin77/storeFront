@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { CartItem } from '../models/CartItem';
+import { Order } from '../models/Order';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
   private cart: CartItem[] = [];
-  private order = null;
+  private order: Order = {} as Order;
   constructor() {}
   setOrder(orderDetails: any) {
     this.order = { ...orderDetails };
