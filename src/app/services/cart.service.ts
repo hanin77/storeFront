@@ -35,4 +35,7 @@ export class CartService {
 
     return this.cart;
   }
+  clearCart() {
+    this.cart = [];
+  }
 }
