@@ -6,8 +6,14 @@ import { CartItem } from '../models/CartItem';
 })
 export class CartService {
   private cart: CartItem[] = [];
+  private order = null;
   constructor() {}
-
+  setOrder(orderDetails: any) {
+    this.order = { ...orderDetails };
+  }
+  getOrder() {
+    return this.order;
+  }
   getCart() {
     return this.cart;
   }
