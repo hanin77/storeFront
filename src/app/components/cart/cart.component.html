@@ -1,0 +1,24 @@
+<div class="cart">
+  <div>
+    <div class="cart__items">
+      <div class="cart-item" *ngFor="let product of cart">
+        <img src="{{ product.url }}" />
+        <div class="cart-item__info">
+          <p>{{ product.name }}</p>
+          <p>${{ product.price }}</p>
+          <div>
+            <label for="amount">Amount: </label
+            ><input
+              (change)="onCartItemQteChange(product, $event)"
+              min="0"
+              name="amount"
+              type="number"
+              value="{{ product.qte }}"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 *ngIf="total">Total Price:{{ total }}</h4>
+  </div>
+</div>
