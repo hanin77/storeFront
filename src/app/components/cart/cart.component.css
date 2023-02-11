@@ -29,34 +29,3 @@
 .cart-item__info p:first-child {
   font-weight: 700;
 }
-
-.order-form {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-}
-
-.order-form .input-group {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.3em;
-  padding: 0.5em 0;
-}
-
-.order-form input {
-  width: 20em;
-  height: 2em;
-}
-.btn {
-  background: #33b5e5;
-  width: 108px;
-  border: none;
-  color: #fff;
-  padding: 0.5em 0.5em;
-  border-radius: 0.2em;
-}
-
-.btn:hover {
-  background: #0597cc;
-  cursor: pointer;
-}

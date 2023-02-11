@@ -21,4 +21,5 @@
     </div>
     <h4 *ngIf="total">Total Price:{{ total }}</h4>
   </div>
+  <app-user-form (userForm)="onSubmit($event)"></app-user-form>
 </div>

@@ -1,0 +1,39 @@
+form {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3em;
+  padding: 0.5em 0;
+}
+
+.input-group input {
+  width: 20em;
+  height: 2em;
+}
+.btn {
+  background: #33b5e5;
+  width: 108px;
+  border: none;
+  color: #fff;
+  padding: 0.5em 0.5em;
+  border-radius: 0.2em;
+}
+
+.btn:hover:enabled {
+  background: #0597cc;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background: #74cdee;
+}
+.text-danger {
+  color: red;
+  padding-top: 0.3em;
+  font-size: 0.7em;
+}

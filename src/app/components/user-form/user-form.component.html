@@ -1,0 +1,80 @@
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+  <div class="input-group">
+    <label>Full Name </label><br />
+    <input
+      type="text"
+      formControlName="fullName"
+      placeholder="(minimun 3 characters)"
+      required
+      [ngClass]="{
+        'is-invalid': submitted && fullName?.touched && fullName?.errors
+      }"
+    />
+
+    <div
+      *ngIf="fullName?.invalid && (fullName?.dirty || fullName?.touched)"
+      class="text-danger"
+    >
+      <div *ngIf="fullName?.errors?.['required']">Full Name is required.</div>
+      <div *ngIf="fullName?.errors?.['minlength']">
+        fullName must be at least 3 characters long.
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="input-group">
+    <label>Address </label><br />
+    <input
+      class="form-control"
+      type="text"
+      formControlName="address"
+      placeholder="(minimun 6 characters)"
+      [ngClass]="{
+        'is-invalid': submitted && address?.touched && address?.errors
+      }"
+    />
+    <div
+      *ngIf="address?.invalid && (address?.dirty || address?.touched)"
+      class="text-danger"
+    >
+      <div *ngIf="address?.errors?.['required']">Address is required.</div>
+      <div *ngIf="address?.errors?.['minlength']">
+        respect min length of 6 characters.
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <div class="input-group">
+    <label>Credit Card Number </label><br />
+    <input
+      type="text"
+      formControlName="cardNumber"
+      placeholder="(16-digit number)"
+      [ngClass]="{
+        'is-invalid': submitted && cardNumber?.touched && cardNumber?.errors
+      }"
+    />
+
+    <div
+      *ngIf="cardNumber?.invalid && (cardNumber?.dirty || cardNumber?.touched)"
+      class="text-danger"
+    >
+      <div *ngIf="cardNumber?.errors?.['required']">
+        Credit Card Number is required.
+      </div>
+      <div *ngIf="cardNumber?.errors?.['maxlength']">
+        Respect max length 16 numbers.
+      </div>
+      <div *ngIf="cardNumber?.errors?.['minlength']">
+        Respect min length 16 numbers.
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <p>We'll never share your payment details with anyone else.</p>
+  <button type="submit" class="btn btn-primary" [disabled]="!createForm.valid">
+    Submit
+  </button>
+</form>

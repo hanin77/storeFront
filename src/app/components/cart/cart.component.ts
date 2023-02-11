@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartItem } from 'src/app/models/CartItem';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -10,7 +11,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit {
   cart: CartItem[] = [];
   total: number = 0;
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
     this.cart = this.cartService.getCart();
@@ -30,5 +31,11 @@ export class CartComponent implements OnInit {
       (total, item: CartItem) => (total += item.qte * item.price),
       0
     );
+  }
+  onSubmit(event: any) {
+    this.cartService.setOrder({ ...event, total: this.total });
+    console.log(this.cartService.getOrder());
+    //navigate to success order page
+    this.router.navigate(['']);
   }
 }
