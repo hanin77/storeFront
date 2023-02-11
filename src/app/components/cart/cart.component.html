@@ -21,5 +21,6 @@
     </div>
     <h4 *ngIf="total">Total Price:{{ total }}</h4>
   </div>
+  <div class="empty-cart" *ngIf="!total">Your Cart is empty</div>
   <app-user-form (userForm)="onSubmit($event)"></app-user-form>
 </div>

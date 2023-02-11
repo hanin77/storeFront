@@ -29,3 +29,9 @@
 .cart-item__info p:first-child {
   font-weight: 700;
 }
+.empty-cart {
+  align-self: center;
+  justify-self: center;
+  font-size: 2em;
+  font-weight: 700;
+}
