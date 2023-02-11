@@ -34,6 +34,7 @@ export class CartComponent implements OnInit {
   }
   onSubmit(event: any) {
     this.cartService.setOrder({ ...event, total: this.total });
+    this.cartService.clearCart();
     console.log(this.cartService.getOrder());
     //navigate to success order page
     this.router.navigate(['']);
