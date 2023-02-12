@@ -48,7 +48,7 @@
   <div class="input-group">
     <label>Credit Card Number </label><br />
     <input
-      type="text"
+      type="number"
       formControlName="cardNumber"
       placeholder="(16-digit number)"
       [ngClass]="{
@@ -63,10 +63,10 @@
       <div *ngIf="cardNumber?.errors?.['required']">
         Credit Card Number is required.
       </div>
-      <div *ngIf="cardNumber?.errors?.['maxlength']">
+      <div *ngIf="cardNumber?.errors?.['max']">
         Respect max length 16 numbers.
       </div>
-      <div *ngIf="cardNumber?.errors?.['minlength']">
+      <div *ngIf="cardNumber?.errors?.['min']">
         Respect min length 16 numbers.
       </div>
     </div>

@@ -26,8 +26,8 @@ export class UserFormComponent implements OnInit {
         '',
         [
           Validators.required,
-          Validators.maxLength(16),
-          Validators.minLength(16),
+          Validators.min(1000000000000000),
+          Validators.max(9999999999999999),
         ],
       ],
     });
@@ -35,7 +35,6 @@ export class UserFormComponent implements OnInit {
   onSubmit() {
     this.userForm.emit(this.createForm.value);
   }
-
   get fullName() {
     return this.createForm.get('fullName');
   }
