@@ -51,3 +51,8 @@
 .product-details__desc .select-input {
   width: 108px;
 }
+a {
+  padding-top: 0.5em;
+  text-decoration: none;
+  color: #0597cc;
+}

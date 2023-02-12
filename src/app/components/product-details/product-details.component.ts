@@ -3,7 +3,7 @@ import { ProductService } from '../../services/product.service';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/Product';
 import { CartService } from 'src/app/services/cart.service';
-
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   id: number | undefined;
   product: Product | undefined = undefined;
   qte: number = 1;
+  faArrowLeft = faArrowLeft;
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
