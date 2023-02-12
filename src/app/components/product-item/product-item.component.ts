@@ -12,8 +12,8 @@ export class ProductItemComponent implements OnInit {
   qte: number = 1;
   constructor(private cartService: CartService) {}
   ngOnInit(): void {}
-  changeQte(event: any): void {
-    this.qte = event?.target?.value;
+  changeQte(quantity: any): void {
+    this.qte = quantity;
   }
   onSubmit(product: Product): void {
     this.cartService.addItemToCart({ ...product, qte: this.qte });
