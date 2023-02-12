@@ -11,6 +11,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartComponent } from './components/cart/cart.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { SuccessComponent } from './components/success/success.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { SuccessComponent } from './components/success/success.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
